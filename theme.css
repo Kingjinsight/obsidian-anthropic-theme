@@ -5,8 +5,9 @@
   --anthropic-cream-2:      #E8E1CC;
   --anthropic-cream-3:      #DDD5BE;
   --anthropic-border:       #D9D3C2;
-  --anthropic-ink:          #141413;
-  --anthropic-ink-2:        #2B2B28;
+  --anthropic-ink:          #2B2B28;
+  --anthropic-ink-strong:   #141413;
+  --anthropic-ink-2:        #4A4842;
   --anthropic-muted:        #6B6B63;
   --anthropic-faint:        #9A9A90;
   --anthropic-coral:        #CC785C;
@@ -40,18 +41,18 @@
   --link-color-hover: var(--anthropic-coral-hover);
   --link-unresolved-color: var(--anthropic-muted);
 
-  --tag-background: var(--anthropic-coral-soft);
+  --tag-background: transparent;
   --tag-color:      var(--anthropic-coral-hover);
 
-  --h1-color: var(--anthropic-ink);
-  --h2-color: var(--anthropic-ink);
-  --h3-color: var(--anthropic-ink);
-  --h4-color: var(--anthropic-ink-2);
-  --h5-color: var(--anthropic-ink-2);
+  --h1-color: var(--anthropic-ink-strong);
+  --h2-color: var(--anthropic-ink-strong);
+  --h3-color: var(--anthropic-ink-strong);
+  --h4-color: var(--anthropic-ink);
+  --h5-color: var(--anthropic-ink);
   --h6-color: var(--anthropic-muted);
 
   --code-background: #E8E4D5;
-  --code-normal:     var(--anthropic-ink);
+  --code-normal:     var(--anthropic-ink-strong);
 
   --blockquote-border-color: var(--anthropic-coral);
   --blockquote-background-color: rgba(20,20,19,0.03);
@@ -63,6 +64,19 @@
 
   --divider-color:  var(--anthropic-border);
   --checkbox-color: var(--anthropic-coral);
+
+  /* Syntax — muted earth tones */
+  --code-keyword:     #B5654B;
+  --code-string:      #6B7A3D;
+  --code-comment:     #8F8B80;
+  --code-function:    #8B6B3D;
+  --code-tag:         #CC785C;
+  --code-value:       #2B2B28;
+  --code-property:    #4A4842;
+  --code-operator:    #6B6B63;
+  --code-number:      #8B6B3D;
+  --code-punctuation: #6B6B63;
+  --code-important:   #B5654B;
 }
 
 .theme-dark {
@@ -105,7 +119,7 @@
   --link-color-hover: var(--anthropic-coral-dk-hover);
   --link-unresolved-color: var(--anthropic-muted-dk);
 
-  --tag-background: var(--anthropic-coral-dk-soft);
+  --tag-background: transparent;
   --tag-color:      var(--anthropic-coral-dk-hover);
 
   --h1-color: var(--anthropic-cream-text);
@@ -128,16 +142,28 @@
 
   --divider-color:  var(--anthropic-border-dk);
   --checkbox-color: var(--anthropic-coral-dk);
+
+  --code-keyword:     #E08C6E;
+  --code-string:      #A8B87A;
+  --code-comment:     #8F8B80;
+  --code-function:    #D9B77C;
+  --code-tag:         #E08C6E;
+  --code-value:       #EDEAE0;
+  --code-property:    #C8C3B4;
+  --code-operator:    #A8A498;
+  --code-number:      #D9B77C;
+  --code-punctuation: #A8A498;
+  --code-important:   #E08C6E;
 }
 
-/* Typography — serif headings, clean sans UI, matching Anthropic's editorial feel */
+/* Typography — serif for long-form reading, sans for UI */
 body {
   --font-interface-theme: "Inter", "Styrene B", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-  --font-text-theme:      "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-text-theme:      "Source Serif 4", "Source Serif Pro", "Tiempos Text", "Iowan Old Style", "Charter", Georgia, serif;
   --font-monospace-theme: "JetBrains Mono", "SF Mono", "Fira Code", ui-monospace, monospace;
   --font-editor-theme:    var(--font-text-theme);
 
-  --h1-font: "Tiempos Headline", "Source Serif Pro", "Iowan Old Style", Georgia, serif;
+  --h1-font: "Tiempos Headline", "Source Serif 4", "Source Serif Pro", "Iowan Old Style", Georgia, serif;
   --h2-font: var(--h1-font);
   --h3-font: var(--h1-font);
 
@@ -153,16 +179,51 @@ body {
   --radius-s: 4px;
   --radius-m: 8px;
   --radius-l: 14px;
+
+  /* Editorial line length */
+  --file-line-width: 42rem;
 }
 
-/* Card-like note containers in reading view */
+/* Reading feel */
 .markdown-preview-view,
 .markdown-source-view {
   line-height: 1.65;
   letter-spacing: -0.005em;
 }
 
-/* Buttons — Anthropic style: filled black pill */
+/* Heading letter-spacing — Tiempos display style */
+.markdown-rendered h1,
+.HyperMD-header-1,
+.cm-header-1 {
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.markdown-rendered h2,
+.HyperMD-header-2,
+.cm-header-2 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.markdown-rendered h3,
+.HyperMD-header-3,
+.cm-header-3 {
+  letter-spacing: -0.005em;
+}
+
+/* Links — thin offset underline (claude.ai style) */
+.markdown-rendered a,
+.markdown-rendered a.internal-link,
+.markdown-rendered a.external-link,
+.cm-link, .cm-hmd-internal-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.markdown-rendered a:hover {
+  text-decoration-thickness: 1.5px;
+}
+
+/* Buttons — Anthropic pill */
 button.mod-cta,
 .theme-light button.mod-cta,
 .theme-dark button.mod-cta {
@@ -177,12 +238,12 @@ button.mod-cta:hover {
   background-color: var(--interactive-accent-hover);
 }
 
-/* Subtle borders on panes */
+/* Panes */
 .workspace-leaf {
   border-color: var(--divider-color);
 }
 
-/* File explorer — slim, editorial */
+/* File explorer */
 .nav-file-title, .nav-folder-title {
   border-radius: var(--radius-s);
 }
@@ -191,18 +252,135 @@ button.mod-cta:hover {
   font-weight: 600;
 }
 
-/* Inline code — chip-like */
+/* Inline code — chip */
 code {
   padding: 0.1em 0.35em;
   border-radius: 4px;
   font-size: 0.9em;
 }
 
-/* Blockquotes — left bar, no italic */
+/* Code blocks — thin border, editorial */
+.markdown-rendered pre,
+.HyperMD-codeblock-bg {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+}
+
+/* Blockquotes */
 .markdown-rendered blockquote {
   border-left: 3px solid var(--blockquote-border-color);
   font-style: normal;
   padding: 0.25em 1em;
+}
+
+/* Callouts — Anthropic doc cards */
+.callout {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background: var(--background-secondary);
+  padding: 0.2em 0;
+  mix-blend-mode: normal;
+  --callout-color: transparent;
+}
+.callout-title {
+  font-weight: 600;
+  padding: 0.6em 1em 0.2em;
+}
+.callout-content {
+  padding: 0 1em 0.6em;
+}
+.callout[data-callout="note"],
+.callout[data-callout="info"],
+.callout[data-callout="tip"],
+.callout[data-callout="important"],
+.callout[data-callout="warning"],
+.callout[data-callout="question"],
+.callout[data-callout="example"],
+.callout[data-callout="quote"] {
+  border-left: 3px solid var(--anthropic-coral);
+}
+.theme-dark .callout[data-callout="note"],
+.theme-dark .callout[data-callout="info"],
+.theme-dark .callout[data-callout="tip"],
+.theme-dark .callout[data-callout="important"],
+.theme-dark .callout[data-callout="warning"],
+.theme-dark .callout[data-callout="question"],
+.theme-dark .callout[data-callout="example"],
+.theme-dark .callout[data-callout="quote"] {
+  border-left-color: var(--anthropic-coral-dk);
+}
+.callout-icon { color: var(--text-accent); }
+
+/* Tables — quiet, docs-like */
+.markdown-rendered table {
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+}
+.markdown-rendered table th {
+  border: none;
+  border-bottom: 1px solid var(--divider-color);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.6em 0.9em;
+  background: transparent;
+}
+.markdown-rendered table td {
+  border: none;
+  padding: 0.55em 0.9em;
+}
+.markdown-rendered table tr:nth-child(even) td,
+.markdown-rendered table tr:nth-child(odd) td {
+  background: transparent;
+}
+.markdown-rendered table tr + tr td {
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+/* Tags — coral-outlined pills */
+a.tag,
+.cm-hashtag {
+  border: 1px solid var(--interactive-accent);
+  color: var(--tag-color);
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.05em 0.65em;
+  font-size: 0.82em;
+  font-weight: 500;
+  text-decoration: none;
+}
+a.tag:hover {
+  background: var(--anthropic-coral-soft);
+}
+.theme-dark a.tag:hover {
+  background: var(--anthropic-coral-dk-soft);
+}
+
+/* Blended chrome — ribbon, status bar, tabs merge into canvas */
+.workspace-ribbon.mod-left,
+.workspace-ribbon.mod-right {
+  background: var(--background-primary);
+  border-right: none;
+  border-left: none;
+}
+.status-bar {
+  background: var(--background-primary);
+  border-top: none;
+  color: var(--text-faint);
+}
+.workspace-tab-header-container {
+  background: var(--background-primary);
+  border-bottom: none;
+}
+.workspace-tab-header.is-active {
+  background: var(--background-primary);
+}
+.workspace-tab-header-inner {
+  color: var(--text-muted);
+}
+.workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: var(--text-normal);
+  font-weight: 600;
 }
 
 /* Scrollbars */
@@ -211,11 +389,4 @@ code {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--background-modifier-border-hover);
-}
-
-/* Status bar quiet */
-.status-bar {
-  background: var(--background-primary);
-  border-top: 1px solid var(--divider-color);
-  color: var(--text-muted);
 }
