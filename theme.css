@@ -259,11 +259,22 @@ code {
   font-size: 0.9em;
 }
 
-/* Code blocks — thin border, editorial */
-.markdown-rendered pre,
-.HyperMD-codeblock-bg {
+/* Code blocks — thin border in reading mode only (live preview is per-line) */
+.markdown-rendered pre {
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--radius-m);
+}
+.HyperMD-codeblock-bg {
+  border: none;
+  background: var(--code-background);
+}
+.HyperMD-codeblock-begin-bg {
+  border-top-left-radius: var(--radius-m);
+  border-top-right-radius: var(--radius-m);
+}
+.HyperMD-codeblock-end-bg {
+  border-bottom-left-radius: var(--radius-m);
+  border-bottom-right-radius: var(--radius-m);
 }
 
 /* Blockquotes */
