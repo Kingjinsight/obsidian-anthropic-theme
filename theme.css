@@ -1,0 +1,221 @@
+/* Anthropic theme for Obsidian — monochrome, warm cream palette */
+
+.theme-light {
+  --anthropic-cream:        #F0EEE6;
+  --anthropic-cream-2:      #E8E1CC;
+  --anthropic-cream-3:      #DDD5BE;
+  --anthropic-border:       #D9D3C2;
+  --anthropic-ink:          #141413;
+  --anthropic-ink-2:        #2B2B28;
+  --anthropic-muted:        #6B6B63;
+  --anthropic-faint:        #9A9A90;
+  --anthropic-coral:        #CC785C;
+  --anthropic-coral-hover:  #B5654B;
+  --anthropic-coral-soft:   rgba(204,120,92,0.14);
+
+  --background-primary:         var(--anthropic-cream);
+  --background-primary-alt:     var(--anthropic-cream);
+  --background-secondary:       #E8E4D5;
+  --background-secondary-alt:   var(--anthropic-cream-2);
+  --background-modifier-border: var(--anthropic-border);
+  --background-modifier-border-hover: #C9C2AE;
+  --background-modifier-hover:  rgba(20,20,19,0.05);
+  --background-modifier-active-hover: rgba(20,20,19,0.08);
+  --background-modifier-form-field: #FBFAF4;
+
+  --text-normal:    var(--anthropic-ink);
+  --text-muted:     var(--anthropic-muted);
+  --text-faint:     var(--anthropic-faint);
+  --text-on-accent: #FFFFFF;
+  --text-accent:    var(--anthropic-coral);
+  --text-accent-hover: var(--anthropic-coral-hover);
+  --text-selection: var(--anthropic-coral-soft);
+
+  --interactive-accent:        var(--anthropic-coral);
+  --interactive-accent-hover:  var(--anthropic-coral-hover);
+  --interactive-normal:        var(--anthropic-cream-2);
+  --interactive-hover:         var(--anthropic-cream-3);
+
+  --link-color:       var(--anthropic-coral);
+  --link-color-hover: var(--anthropic-coral-hover);
+  --link-unresolved-color: var(--anthropic-muted);
+
+  --tag-background: var(--anthropic-coral-soft);
+  --tag-color:      var(--anthropic-coral-hover);
+
+  --h1-color: var(--anthropic-ink);
+  --h2-color: var(--anthropic-ink);
+  --h3-color: var(--anthropic-ink);
+  --h4-color: var(--anthropic-ink-2);
+  --h5-color: var(--anthropic-ink-2);
+  --h6-color: var(--anthropic-muted);
+
+  --code-background: #E8E4D5;
+  --code-normal:     var(--anthropic-ink);
+
+  --blockquote-border-color: var(--anthropic-coral);
+  --blockquote-background-color: rgba(20,20,19,0.03);
+
+  --titlebar-background:        var(--anthropic-cream);
+  --titlebar-background-focused: var(--anthropic-cream);
+  --ribbon-background:          var(--anthropic-cream);
+  --tab-background-active:      var(--anthropic-cream);
+
+  --divider-color:  var(--anthropic-border);
+  --checkbox-color: var(--anthropic-coral);
+}
+
+.theme-dark {
+  --anthropic-ink-bg:       #1A1915;
+  --anthropic-ink-bg-2:     #242320;
+  --anthropic-ink-bg-3:     #2E2D29;
+  --anthropic-border-dk:    #3A3833;
+  --anthropic-cream-text:   #EDEAE0;
+  --anthropic-cream-text-2: #D9D5C7;
+  --anthropic-muted-dk:     #8F8B80;
+  --anthropic-faint-dk:     #63615A;
+  --anthropic-coral-dk:       #E08C6E;
+  --anthropic-coral-dk-hover: #EDA488;
+  --anthropic-coral-dk-soft:  rgba(224,140,110,0.18);
+
+  --background-primary:         var(--anthropic-ink-bg);
+  --background-primary-alt:     var(--anthropic-ink-bg);
+  --background-secondary:       var(--anthropic-ink-bg-2);
+  --background-secondary-alt:   var(--anthropic-ink-bg-3);
+  --background-modifier-border: var(--anthropic-border-dk);
+  --background-modifier-border-hover: #4A4842;
+  --background-modifier-hover:  rgba(237,234,224,0.06);
+  --background-modifier-active-hover: rgba(237,234,224,0.10);
+  --background-modifier-form-field: #1F1E1A;
+
+  --text-normal:    var(--anthropic-cream-text);
+  --text-muted:     var(--anthropic-muted-dk);
+  --text-faint:     var(--anthropic-faint-dk);
+  --text-on-accent: #1A1915;
+  --text-accent:    var(--anthropic-coral-dk);
+  --text-accent-hover: var(--anthropic-coral-dk-hover);
+  --text-selection: var(--anthropic-coral-dk-soft);
+
+  --interactive-accent:        var(--anthropic-coral-dk);
+  --interactive-accent-hover:  var(--anthropic-coral-dk-hover);
+  --interactive-normal:        var(--anthropic-ink-bg-2);
+  --interactive-hover:         var(--anthropic-ink-bg-3);
+
+  --link-color:       var(--anthropic-coral-dk);
+  --link-color-hover: var(--anthropic-coral-dk-hover);
+  --link-unresolved-color: var(--anthropic-muted-dk);
+
+  --tag-background: var(--anthropic-coral-dk-soft);
+  --tag-color:      var(--anthropic-coral-dk-hover);
+
+  --h1-color: var(--anthropic-cream-text);
+  --h2-color: var(--anthropic-cream-text);
+  --h3-color: var(--anthropic-cream-text);
+  --h4-color: var(--anthropic-cream-text-2);
+  --h5-color: var(--anthropic-cream-text-2);
+  --h6-color: var(--anthropic-muted-dk);
+
+  --code-background: #242320;
+  --code-normal:     var(--anthropic-cream-text);
+
+  --blockquote-border-color: var(--anthropic-coral-dk);
+  --blockquote-background-color: rgba(237,234,224,0.04);
+
+  --titlebar-background:        var(--anthropic-ink-bg);
+  --titlebar-background-focused: var(--anthropic-ink-bg);
+  --ribbon-background:          var(--anthropic-ink-bg);
+  --tab-background-active:      var(--anthropic-ink-bg);
+
+  --divider-color:  var(--anthropic-border-dk);
+  --checkbox-color: var(--anthropic-coral-dk);
+}
+
+/* Typography — serif headings, clean sans UI, matching Anthropic's editorial feel */
+body {
+  --font-interface-theme: "Inter", "Styrene B", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-text-theme:      "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-monospace-theme: "JetBrains Mono", "SF Mono", "Fira Code", ui-monospace, monospace;
+  --font-editor-theme:    var(--font-text-theme);
+
+  --h1-font: "Tiempos Headline", "Source Serif Pro", "Iowan Old Style", Georgia, serif;
+  --h2-font: var(--h1-font);
+  --h3-font: var(--h1-font);
+
+  --h1-weight: 600;
+  --h2-weight: 600;
+  --h3-weight: 600;
+
+  --h1-size: 2.1em;
+  --h2-size: 1.55em;
+  --h3-size: 1.25em;
+
+  --bold-weight: 600;
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 14px;
+}
+
+/* Card-like note containers in reading view */
+.markdown-preview-view,
+.markdown-source-view {
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+}
+
+/* Buttons — Anthropic style: filled black pill */
+button.mod-cta,
+.theme-light button.mod-cta,
+.theme-dark button.mod-cta {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-radius: 999px;
+  padding: 0.45em 1em;
+  border: none;
+  font-weight: 500;
+}
+button.mod-cta:hover {
+  background-color: var(--interactive-accent-hover);
+}
+
+/* Subtle borders on panes */
+.workspace-leaf {
+  border-color: var(--divider-color);
+}
+
+/* File explorer — slim, editorial */
+.nav-file-title, .nav-folder-title {
+  border-radius: var(--radius-s);
+}
+.nav-file-title.is-active {
+  background-color: var(--background-modifier-hover);
+  font-weight: 600;
+}
+
+/* Inline code — chip-like */
+code {
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Blockquotes — left bar, no italic */
+.markdown-rendered blockquote {
+  border-left: 3px solid var(--blockquote-border-color);
+  font-style: normal;
+  padding: 0.25em 1em;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar-thumb {
+  background: var(--background-modifier-border);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--background-modifier-border-hover);
+}
+
+/* Status bar quiet */
+.status-bar {
+  background: var(--background-primary);
+  border-top: 1px solid var(--divider-color);
+  color: var(--text-muted);
+}
