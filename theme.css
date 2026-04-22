@@ -158,12 +158,12 @@
 
 /* Typography — serif for long-form reading, sans for UI */
 body {
-  --font-interface-theme: "Inter", "Styrene B", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-  --font-text-theme:      "Source Serif 4", "Source Serif Pro", "Tiempos Text", "Iowan Old Style", "Charter", Georgia, serif;
-  --font-monospace-theme: "JetBrains Mono", "SF Mono", "Fira Code", ui-monospace, monospace;
+  --font-interface-theme: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", system-ui, sans-serif;
+  --font-text-theme:      "Lora", "Noto Serif CJK SC", Georgia, serif;
+  --font-monospace-theme: "JetBrains Mono", "Maple Mono NF CN", ui-monospace, monospace;
   --font-editor-theme:    var(--font-text-theme);
 
-  --h1-font: "Tiempos Headline", "Source Serif 4", "Source Serif Pro", "Iowan Old Style", Georgia, serif;
+  --h1-font: "Lora", "Noto Serif CJK SC", Georgia, serif;
   --h2-font: var(--h1-font);
   --h3-font: var(--h1-font);
 
